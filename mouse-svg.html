@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link href="css/mouse-svg.css" media="all" rel="stylesheet">
+	</head>
+	<body>
+		<div id="mouse-container">
+		   <svg id="mouse" xmlns="http://www.w3.org/2000/svg" width="19" height="32" viewBox="0 0 19 32" xmlns:xlink="http://www.w3.org/1999/xlink">
+			  <defs>
+			    <rect id="a" width="19" height="32" rx="9.5"/>
+			    <mask id="b" width="19" height="32" x="0" y="0" fill="white">
+			      <use xlink:href="#a"/>
+			    </mask>
+			  </defs>
+			  <g fill="none" fill-rule="evenodd" stroke="#D0D0D0">
+			    <use stroke-width="2" mask="url(#b)" xlink:href="#a"/>
+			    <g id="scroll">
+			      <path d="M1.5,0.5 L1.5,6.5" transform="translate(8 8)" stroke-linecap="square"/>
+			    </g>
+			  </g>
+			</svg>
+		</div>
+		<script async="" type="text/javascript" charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+	</body>
+</html>
