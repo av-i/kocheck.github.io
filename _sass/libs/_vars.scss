@@ -28,18 +28,22 @@
 
 // Font.
 	$font: (
-		family:				('Open Sans', Helvetica, sans-serif),
-		family-fixed:		('Courier New', monospace),
+		family:				('Lato', Helvetica, sans-serif),
+		family-fixed:		('Playfair Display', serif),
 		weight:				400,
-		weight-bold:		600,
-		weight-extrabold:	800
+		weight-bold:		900,
+		weight-extrabold:	900
 	);
+
 
 // Palette.
 	$palette: (
-		bg:					#2e3842,
+		bg:					#38263C,
 		fg:					#fff,
 		fg-bold:			#fff,
+		fg-dark: #120C14,
+		fg-med: #706F71,
+		fg-lighter: #F5F5F5,
 		fg-light:			rgba(255,255,255,0.5),
 		border:				#fff,
 		border-bg:			rgba(144,144,144,0.25),
@@ -47,7 +51,7 @@
 		border2-bg:			rgba(144,144,144,0.5),
 
 		accent1: (
-			bg:				#21b2a6,
+			bg:				#E62840,
 			fg-bold:		#ffffff,
 			fg:				mix(#21b2a6, #ffffff, 25%),
 			fg-light:		mix(#21b2a6, #ffffff, 40%),
@@ -58,7 +62,7 @@
 		),
 
 		accent2: (
-			bg:				#00ffcc,
+			bg:				#FF2C47,
 			fg-bold:		#ffffff,
 			fg:				mix(#00ffcc, #ffffff, 25%),
 			fg-light:		mix(#00ffcc, #ffffff, 40%),
@@ -69,7 +73,7 @@
 		),
 
 		accent3: (
-			bg:				#00f0ff,
+			bg:				#EDEDED,
 			fg-bold:		#ffffff,
 			fg:				mix(#00f0ff, #ffffff, 25%),
 			fg-light:		mix(#00f0ff, #ffffff, 40%),
@@ -80,7 +84,7 @@
 		),
 
 		accent4: (
-			bg:				#76ddff,
+			bg:				#D0D0D0,
 			fg-bold:		#ffffff,
 			fg:				mix(#76ddff, #ffffff, 25%),
 			fg-light:		mix(#76ddff, #ffffff, 40%),
@@ -91,7 +95,7 @@
 		),
 
 		accent5: (
-			bg:				#505393,
+			bg:				#38263C,
 			fg-bold:		#ffffff,
 			fg:				mix(#505393, #ffffff, 25%),
 			fg-light:		mix(#505393, #ffffff, 40%),
@@ -102,7 +106,7 @@
 		),
 
 		accent6: (
-			bg:				#ed4933,
+			bg:				#E62840,
 			fg-bold:		#ffffff,
 			fg:				mix(#ed4933, #ffffff, 25%),
 			fg-light:		mix(#ed4933, #ffffff, 40%),

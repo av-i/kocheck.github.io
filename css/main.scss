@@ -8,13 +8,18 @@ $baseurl: '{{ site.baseurl }}/images';
 @import 'libs/functions';
 @import 'libs/mixins';
 @import 'font-awesome.min.css';
-@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,900|Playfair+Display');
 
 /*
 	Spectral by HTML5 UP
 	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+
+/*
+Kyles Edits - Optimize Later
+*/
+/* -------------------------*/
 
 	@import 'libs/skel';
 
@@ -39,7 +44,7 @@ $baseurl: '{{ site.baseurl }}/images';
 	}
 
 	body {
-		background: _palette(bg);
+		background: _palette(fg-dark);
 
 		&.is-loading {
 			*, *:before, *:after {
@@ -980,6 +985,26 @@ $baseurl: '{{ site.baseurl }}/images';
 			@include vendor('order', '2');
 			max-width: 48em;
 			width: 60%;
+
+				h1{
+					color: _palette(accent1, bg);
+					font-family: _family-fixed;
+					font-weight: 400;
+					text-transform: none;
+					letter-spacing: .1em;
+					font-size: 1em;
+				}
+
+				h2{
+					font-size: 1.8em;
+					color: _palette(fg-dark);
+					text-transform: none;
+					letter-spacing: normal;
+				}
+				p{
+					color: _palette(fg-dark);
+				}
+
 		}
 
 		&:nth-child(2n) {
@@ -990,7 +1015,7 @@ $baseurl: '{{ site.baseurl }}/images';
 			$j: 0.075 * $i;
 
 			&:nth-child(#{$i}) {
-				background-color: rgba(0,0,0, $j);
+				background-color: _palette(fg-lighter);
 			}
 		}
 
@@ -1324,7 +1349,7 @@ $baseurl: '{{ site.baseurl }}/images';
 					border: 0;
 					color: inherit;
 					display: block;
-					font-size: 0.8em;
+					font-size: 1.1em;
 					letter-spacing: _size(letter-spacing-alt);
 					outline: 0;
 					text-decoration: none;
@@ -1375,7 +1400,7 @@ $baseurl: '{{ site.baseurl }}/images';
 
 	#header {
 		@include vendor('transition', 'background-color #{_duration(transitions)} ease');
-		background: _palette(bg);
+		background: _palette(fg-dark);
 		height: 3em;
 		left: 0;
 		line-height: 3em;
@@ -1499,7 +1524,7 @@ $baseurl: '{{ site.baseurl }}/images';
 			position: relative;
 			z-index: 1;
 
-			&:before, &:after {
+		/*	&:before, &:after {
 				@include vendor('transition', 'width 0.85s ease');
 				@include vendor('transition-delay', '0.25s');
 				background: _palette(fg-bold);
@@ -1508,7 +1533,7 @@ $baseurl: '{{ site.baseurl }}/images';
 				height: 2px;
 				position: absolute;
 				width: 100%;
-			}
+			}*/
 
 			&:before {
 				top: 0;
@@ -1520,10 +1545,17 @@ $baseurl: '{{ site.baseurl }}/images';
 				right: 0;
 			}
 		}
+		h5 {
+			letter-spacing: .2em;
+			font-weight: 400;
+			color:  _palette(fg-light);
+		}
 
-		p {
-			letter-spacing: _size(letter-spacing-alt);
-			text-transform: uppercase;
+		h2 {
+			letter-spacing: .1em;
+			font-family: _font(family-fixed);
+			font-weight: 400;
+			color: _palette(fg);
 
 			a {
 				color: inherit;
@@ -1572,7 +1604,7 @@ $baseurl: '{{ site.baseurl }}/images';
 			@include vendor('transition', 'opacity #{_duration(fadein)} ease-in-out');
 			@include vendor('transition-delay', '1.25s');
 			content: '';
-			background: _palette(bg);
+			background: _palette(fg-dark);
 			display: block;
 			width: 100%;
 			height: 100%;
@@ -1601,7 +1633,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 	}
 
-	body.is-loading {
+body.is-loading {
 		#banner {
 			h2 {
 				@include vendor('transform', 'scale(0.95)');
@@ -1733,23 +1765,23 @@ $baseurl: '{{ site.baseurl }}/images';
 
 	#footer {
 		@include padding(6em, 0);
-		background-color: darken(_palette(bg), 8);
+		background-color: _palette(fg);
 		text-align: center;
 
 		.icons {
 			font-size: 1.25em;
 
 			a {
-				color: _palette(fg-light);
+				color: _palette(fg-med);
 
 				&:hover {
-					color: _palette(fg);
+					color: _palette(fg-dark);
 				}
 			}
 		}
 
 		.copyright {
-			color: _palette(fg-light);
+			color: _palette(fg-med);
 			font-size: 0.8em;
 			letter-spacing: _size(letter-spacing-alt);
 			list-style: none;
@@ -1757,7 +1789,7 @@ $baseurl: '{{ site.baseurl }}/images';
 			text-transform: uppercase;
 
 			li {
-				border-left: solid 1px _palette(fg-light);
+				border-left: solid 1px _palette(fg-med);
 				display: inline-block;
 				line-height: 1em;
 				margin-left: 1em;
@@ -1809,7 +1841,11 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 
 		#footer {
-			background-color: darken(transparentize(_palette(bg), 0.1), 8);
+			background-color: _palette(fg);
+
+			a:hover{
+				color: _palette(accent1, bg);
+			}
 		}
 	}
 
@@ -1828,7 +1864,7 @@ $baseurl: '{{ site.baseurl }}/images';
 			}
 
 			#footer {
-				background-color: darken(_palette(bg), 8);
+				background-color: _palette(fg);
 			}
 		}
 	}
