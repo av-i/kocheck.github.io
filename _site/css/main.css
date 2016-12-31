@@ -2685,7 +2685,9 @@ body.landing #page-wrapper {
   background-size: cover;
   padding-top: 0; }
 body.landing #footer {
-  background-color: rgba(33, 22, 35, 0.9); }
+  background-color: #fff; }
+  body.landing #footer a:hover {
+    color: #E62840; }
 
 body.is-mobile.landing #page-wrapper {
   background: none; }

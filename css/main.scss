@@ -1841,7 +1841,11 @@ body.is-loading {
 		}
 
 		#footer {
-			background-color: darken(transparentize(_palette(bg), 0.1), 8);
+			background-color: _palette(fg);
+
+			a:hover{
+				color: _palette(accent1, bg);
+			}
 		}
 	}
 
