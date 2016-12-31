@@ -44,7 +44,7 @@ Kyles Edits - Optimize Later
 	}
 
 	body {
-		background: _palette(bg);
+		background: _palette(fg-dark);
 
 		&.is-loading {
 			*, *:before, *:after {
@@ -985,6 +985,26 @@ Kyles Edits - Optimize Later
 			@include vendor('order', '2');
 			max-width: 48em;
 			width: 60%;
+
+				h1{
+					color: _palette(accent1, bg);
+					font-family: _family-fixed;
+					font-weight: 400;
+					text-transform: none;
+					letter-spacing: .1em;
+					font-size: 1em;
+				}
+
+				h2{
+					font-size: 1.8em;
+					color: _palette(fg-dark);
+					text-transform: none;
+					letter-spacing: normal;
+				}
+				p{
+					color: _palette(fg-dark);
+				}
+
 		}
 
 		&:nth-child(2n) {
@@ -995,7 +1015,7 @@ Kyles Edits - Optimize Later
 			$j: 0.075 * $i;
 
 			&:nth-child(#{$i}) {
-				background-color: rgba(0,0,0, $j);
+				background-color: _palette(fg-lighter);
 			}
 		}
 
@@ -1380,7 +1400,7 @@ Kyles Edits - Optimize Later
 
 	#header {
 		@include vendor('transition', 'background-color #{_duration(transitions)} ease');
-		background: _palette(bg);
+		background: _palette(fg-dark);
 		height: 3em;
 		left: 0;
 		line-height: 3em;
@@ -1584,7 +1604,7 @@ Kyles Edits - Optimize Later
 			@include vendor('transition', 'opacity #{_duration(fadein)} ease-in-out');
 			@include vendor('transition-delay', '1.25s');
 			content: '';
-			background: _palette(bg);
+			background: _palette(fg-dark);
 			display: block;
 			width: 100%;
 			height: 100%;
@@ -1745,23 +1765,23 @@ body.is-loading {
 
 	#footer {
 		@include padding(6em, 0);
-		background-color: darken(_palette(bg), 8);
+		background-color: _palette(fg);
 		text-align: center;
 
 		.icons {
 			font-size: 1.25em;
 
 			a {
-				color: _palette(fg-light);
+				color: _palette(fg-med);
 
 				&:hover {
-					color: _palette(fg);
+					color: _palette(fg-dark);
 				}
 			}
 		}
 
 		.copyright {
-			color: _palette(fg-light);
+			color: _palette(fg-med);
 			font-size: 0.8em;
 			letter-spacing: _size(letter-spacing-alt);
 			list-style: none;
@@ -1769,7 +1789,7 @@ body.is-loading {
 			text-transform: uppercase;
 
 			li {
-				border-left: solid 1px _palette(fg-light);
+				border-left: solid 1px _palette(fg-med);
 				display: inline-block;
 				line-height: 1em;
 				margin-left: 1em;
@@ -1840,7 +1860,7 @@ body.is-loading {
 			}
 
 			#footer {
-				background-color: darken(_palette(bg), 8);
+				background-color: _palette(fg);
 			}
 		}
 	}
