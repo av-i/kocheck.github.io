@@ -19,6 +19,18 @@ $baseurl: '{{ site.baseurl }}/images';
 /*
 Kyles Edits - Optimize Later
 */
+#logok {
+    padding-bottom: .2em;
+}/* Edits to SVG Hero Logo */
+.logofont{
+  font-weight: 400;
+}
+.content h2 {
+  -webkit-margin-before: 0.2em;
+-webkit-margin-after: 0.2em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+}
 /* -------------------------*/
 
 	@import 'libs/skel';
