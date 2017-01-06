@@ -1,21 +1,37 @@
-<!-- Header -->
-<header id="header"{% if page.layout == 'landing' %} class="alt"{% endif %}>
-  <h1><a class="logofont" href="{{ site.baseurl }}/index.html">Kochanek Design</a></h1>
-  <nav id="nav">
-    <ul>
-      <li class="special">
-        <a href="#menu" class="menuToggle"><span>Menu</span></a>
-        <div id="menu">
-          <ul>
-            <li><a href="index.html">Work</a></li>
-            {% for my_page in site.pages %}
-            {% if my_page.title %}
-            <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
-            {% endif %}
-            {% endfor %}
-          </ul>
-        </div>
-      </li>
-    </ul>
-  </nav>
-</header>
+<!-- Wrapper -->
+<div id="wrapper">
+
+	<header id="header">
+		<div class="inner">
+
+			<!-- Logo
+			<a href="{{ site.baseurl }}/" class="logo">
+				<span class="symbol">
+
+					{% if site.font-awesome-icon-logo %}
+
+					<div href="#" class="icon style1 {{ site.font-awesome-icon-logo }}"></div>
+
+					{% else %}
+
+					<img src="{{ site.baseurl }}/{{ site.logo-image-url }}" alt="" />
+
+					{% endif %}-->
+
+
+			</a>
+			<!-- Nav -->
+			<nav>
+				<ul>
+					<li><a href="#menu">Menu</a></li>
+				</ul>
+			</nav>
+
+		</div>
+	</header>
+
+	{% include menu.html %}
+
+	<!-- Main -->
+	<div id="main">
+		<div class="inner">
